@@ -1,0 +1,787 @@
+:root {
+  --primary-color-1: #4361ee;
+  --primary-color-2: #443ea8;
+  --primary-color-3: #4b63cf;
+  --primary-dark: #211e54;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    font-family:Arial, Helvetica, sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hero{
+    width:50vh;
+    height: 50vh;
+}
+/* Custom navbar background */
+.navbar-custom {
+  background: linear-gradient(45deg, var(--primary-color-1), var(--primary-color-2)) !important;
+}
+
+/* Change dropdown menu background */
+.dropdown-menu {
+  background-color: #f8f9fa !important;
+}
+
+/* Change navbar text color to white */
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand {
+  color: rgb(255, 255, 255) !important;
+  font-weight: 700;
+  text-align: left;
+}
+
+/* Change hamburger icon color */
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.logo {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, var(--primary-color-1), var(--primary-color-2)); /* initial gradient */
+  
+  /* Required to make text gradient work */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.sub_logo{
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 70%;
+}
+.quote_div{
+    background-color: rgb(240, 234, 234);
+    width: fit-content;
+    margin: 10px;
+    padding: 20px;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     border-radius: 10px;
+}
+.start_btn{
+    background: linear-gradient(45deg, var(--primary-color-1), var(--primary-color-2), var(--primary-color-3));
+    background-size: 300% 300%;
+    color: white;
+    margin-top: 20px;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(67, 97, 238, 0.4);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 10px;
+}
+.home_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    margin: 10px;
+}
+.quote_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 5px;
+}
+.author{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.start_btn:hover{
+   background: linear-gradient(45deg, #0c0e14, var(--primary-dark));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+/* page 2  */
+.logo_div_page2{
+display: flex;
+justify-content: center;
+margin-top: 20px;
+}
+.progress{
+width:16.3rem;
+height: 1rem;
+}
+.progress_texts{
+    display: flex;
+    gap: 15px;    
+}
+.task_progress {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px auto; /* Auto margins for horizontal centering */
+    background-color: rgb(213, 201, 201);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom:10px;
+    width: 19rem;
+    text-align: center;
+}
+.progress_count{
+    font-weight: 700;
+}
+.add_btn{
+    background-color: var(--primary-color-3);
+    border: 0px;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary-color-1), var(--primary-color-2));
+}
+
+.taskInput{
+    text-align: left;
+    padding: 2.5px;
+    padding-left: 10px;
+    border-radius: 500px;
+    border: 0px;
+    background-color: rgb(243, 243, 243);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border:solid 2px var(--primary-color-3) ;
+    width: 14rem;
+}
+.input_div{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin:20px;
+}
+
+.add_btn:hover{
+  background: linear-gradient(45deg, #0c0e14, var(--primary-dark));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.empty_img{
+    height: 17rem;
+    width: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.empty_text{
+    font-weight: 300;
+}
+.empty_task_img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#empty_img_text_div{
+    display: none;
+}
+.task-item{
+    font-size: 1rem;
+    font-weight: 500;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30rem;
+    text-align: center;
+}
+.sec_div{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+}
+.task-item {
+    background: linear-gradient(45deg, var(--primary-color-1), var(--primary-color-2));
+    color: rgb(240, 234, 234);
+    border-radius: 10px;
+    min-height: 2rem; /* Allows height increase */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17rem; /* Fixed width */
+    padding: 0.5rem 1rem; /* More padding for wrapped text */
+    word-break: break-word; /* Allows text to wrap */
+    text-align: center; /* Center-aligns wrapped text */
+    margin-left: -16px;
+    justify-content:space-between;
+    gap: 10px;
+}
+.complete-btn{
+    background-color: transparent;
+    color: white;
+    border: 0px solid;
+}
+.delete-btn{
+    background-color: transparent;
+    color: white;
+    border: 0px solid;
+}
+.complete-checkbox {
+  margin-right: 20px;
+  transform: scale(1.2);
+  cursor: pointer;
+  accent-color: rgb(0, 0, 0);
+}
+.fade-in {
+  animation: fadeIn 0.4s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.task-item span {
+  flex: 1;
+  text-align: left;
+}
+.complete-btn,
+.delete-btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+#taskInput:focus {
+  outline: none; /* Removes the default blue outline */
+  border: solid 2px var(--primary-color-3); /* Apply your custom border */
+  box-shadow: none; /* Optional: removes browser-added glow */
+}
+
+.task-item.completed {
+  background: linear-gradient(45deg, #282829, #000000);
+  opacity: 0.6;
+  transition: all 0.3s ease-in-out;
+}
+.task-item span.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+.fade-out{
+    opacity: 0;
+  transition: opacity 0.6s ease;
+}
+body {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+body.fade-in {
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+.progress_heading{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.username_input_div{
+    flex-direction: row;
+    gap: 5px;
+    display: n;
+}
+.userName{
+    height: 2rem;
+    border-radius: 500px;
+    border: solid 2px black;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border:solid 2px var(--primary-color-3) ;
+}
+.submituserName{
+    height: 2.2rem;
+    border-radius: 500px;
+    background-color: #000000;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border: solid 0px;
+    margin-top: 20px;
+    align-items: center;
+     background: linear-gradient(45deg, var(--primary-color-1), var(--primary-color-2));
+}
+.user_page_img{
+    height: 25rem;
+    margin-top: 10px;
+}
+.wrapper_user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 90px;
+}
+.para_page2{
+    padding: 20px;
+    font-weight: 800;
+    opacity: 70%;
+}
+@media (max-width:500px) {
+    .wrapper_user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+}
+.userGreet{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 10px;
+}
+.timeInput{
+    padding: 2.5px;
+    padding-left: 10px;
+    border-radius:500px;
+    border: 0px;
+    background-color: rgb(243, 243, 243);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border:solid 2px var(--primary-color-3) ;
+    width: 3rem;
+    display: none;
+}
+.openTimeInput{
+    border: 0px;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary-color-1), var(--primary-color-2));
+     display: non;
+}
+.clockIcon{
+    color: white;
+    height: 1rem;
+    width: 1rem;
+}
+.openTimeInput:hover{
+  background: linear-gradient(45deg, #0c0e14, var(--primary-dark));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.backBtn{
+    border: 0px;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: linear-gradient(45deg,  #333334, #000000);
+     display: none;
+}
+.backIcon{
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+.taskInput{
+    text-align: left;
+    padding: 2.5px;
+    padding-left: 10px;
+    border-radius: 500px;
+    border: 0px;
+    background-color: rgb(243, 243, 243);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border:solid 2px var(--primary-color-3) ;
+    width: 14rem;
+}
+.time-input-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.time-input {
+  display: flex;
+  align-items: center;
+  background: #f1f1f1;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  justify-content: space-between;
+}
+
+.time-label {
+  margin-right: 0.5rem;
+  font-weight: 900;
+  color: #000000;
+}
+
+.time-input input[type="time"] {
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+}
+.time-label{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.time{
+    width: 8.5rem;
+    height: 1rem;
+    justify-content: space-between;
+}
+.time-input{
+    width: 18.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.time-input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: -20px;
+    display: none;
+}
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.time-input-group.animated {
+  animation: slideFadeIn 0.4s ease forwards;
+}
+.task-time {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+.task-time {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-left: 10px;
+  font-style: italic;
+}
+
+.time-display{
+    color: rgb(255, 255, 255);
+    background-color: #ffffff37;
+    border-radius: 20px;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 5px;
+    margin-left: -5px;
+}
+/* Fix for Task List Structure */
+.task-list {
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+}
+
+/* Task Item Container */
+.task-item {
+    background: linear-gradient(45deg, var(--primary-color-1), var(--primary-color-2));
+    color: white;
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* Time Display */
+.task-item .time-display {
+    display: block;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 8px;
+    padding: 4px 8px;
+    background-color: rgba(5, 5, 5, 0.444);
+    border-radius: 12px;
+    width: fit-content;
+}
+
+/* Task Content Row */
+.task-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Checkbox Styling */
+.task-checkbox {
+    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+    accent-color: white;
+}
+
+/* Task Text */
+.task-text {
+    flex-grow: 1;
+    padding-right: 10px;
+}
+
+/* Delete Icon */
+.delete-icon {
+    color: white;
+    opacity: 0.8;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.delete-icon:hover {
+    opacity: 1;
+}
+
+/* Completed Task */
+.task-item.completed {
+    background: linear-gradient(45deg, #282829, #000000);
+    opacity: 0.8;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+}
+/* Task List Container */
+.task-list {
+    list-style: none;
+    padding: 15px;
+    width: 100%;
+    max-width: 200px;
+}
+
+/* Task Item Container */
+.task-item {
+    background: linear-gradient(45deg, var(--primary-color-1), var(--primary-color-2));
+    color: white;
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Time Display */
+.time-display {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 8px;
+    padding: 4px 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+/* Task Content Row */
+.task-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Checkbox Styling */
+.task-checkbox {
+    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+    accent-color: white;
+    cursor: pointer;
+}
+
+/* Task Text */
+.task-text {
+    flex-grow: 1;
+    text-align: left;
+    padding-right: 10px;
+    word-break: break-word;
+}
+
+/* Delete Icon */
+.delete-icon {
+    color: white;
+    opacity: 0.8;
+    cursor: pointer;
+    margin-left: auto;
+    transition: opacity 0.2s;
+}
+
+.delete-icon:hover {
+    opacity: 1;
+}
+
+/* Completed Task */
+.task-item.completed {
+    background: linear-gradient(45deg, #282829, #000000);
+    opacity: 0.8;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+}
+.task-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.task-item{
+    width: 18.5rem;
+    margin-left: 5px;
+}
+.boythemeimg{
+    height: 10rem;
+    width: 10rem;
+    border: #443ea8 solid 15px;
+    border-radius: 5000px;
+}
+.theme_btn{
+    background-color: var(--primary-color-2);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: 0px solid ;
+}
+.azure_theme_sec{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  background-color: rgb(248, 245, 245);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.91);
+  justify-content: space-between;
+  padding: 20px;
+  margin: 10px;
+}
+.azure_btn{
+    background-color: #443ea8;
+}
+.theme_choose_sec{
+    display: flex;
+    flex-direction: column;
+    gap:0px;
+}
+.blossom_theme_sec{
+    background-color: rgb(248, 245, 245);
+    margin-bottom: 30px;
+}
+.girlThemeimg{
+    border: #9c1a5e solid 15px; 
+}
+
+.texts_div{
+    display: flex;
+    flex-direction: column;
+}
+.blossom_btn{
+    background-color:#9c1a5e;
+}
+#themeText{
+    font-weight: 900;
+}
+.currentThemeText{
+    margin-top: -10px;
+    margin-bottom: 15px;
+    font-weight: 400;
+   opacity: 80%;
+}
+.saveThemeBtn{
+    padding: 8px;
+    width: fit-content;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #00000074;
+    color: white;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 0px solid;
+    
+}
+.themeText_themeSelection{
+    display: flex;
+    flex-direction: column;
+    background-color: #0000002e;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 10px;
+}
+/* For the task checkboxes */
+.task-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* Change checkbox color based on theme */
+.task-checkbox {
+  accent-color: var(--primary-color-2); /* Uses your theme color */
+}
+
+/* For completed tasks - make checkmark more visible */
+.task-item.completed .task-checkbox {
+  accent-color: #000000; /* Black checkmark for better visibility */
+  filter: contrast(1.5); /* Increases visibility */
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 768px) {
+  .task-checkbox {
+    width: 22px; /* Slightly larger for mobile */
+    height: 22px;
+    accent-color: #000000; /* Force black checkmark on mobile */
+  }
+  
+  .task-item.completed .task-checkbox {
+    accent-color: #000000 !important;
+    filter: brightness(0.8) contrast(2);
+  }
+}
